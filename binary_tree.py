@@ -6,6 +6,12 @@ class TreeNode:
         self.left = None
         self.right = None
         self.p = None
+        
+    def __repr__(self):
+        return "< %s %s >" % (self.key,self.p)
+
+    def __str__(self):
+        return "< %s %s >" % (self.key,self.p)
 
 class BinaryTree:
     def __init__(self):
@@ -116,10 +122,16 @@ if __name__ == "__main__":
 
     B = BinaryTree();
     
+    for i in range(100):
+        B.insert(random.randint(1,100))
+    
+    """If I wanted to insert pairs of numbers"""
+    """
     for i in range(10):
         for j in range(10):
             r1 = random.randint(1,100)
             r2 = random.randint(1,100)
             B.insert([r1,r2])
             print (r1,r2)
+   """
 
